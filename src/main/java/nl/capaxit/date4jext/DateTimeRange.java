@@ -35,6 +35,14 @@ public class DateTimeRange {
         }
     }
 
+    public double minutesBetween() {
+        return begin.numSecondsFrom(end) / 60;
+    }
+
+    public double hoursBetween() {
+        return minutesBetween() / 60;
+    }
+
     public static enum RangeOptions {
         BEGIN_AND_END_INCLUSIVE,
         BEGIN_AND_END_EXCLUSIVE,
